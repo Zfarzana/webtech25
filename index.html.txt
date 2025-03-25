@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JS Examplet</title>
+</head>
+<body>
+    <h1 id="head">JS Example</h1>
+
+    <form action="home.html" onsubmit="return validate()">
+        Username: <input type="text" id="username" name="username" value="" onkeyup="changeText()"/> 
+        <p id="usererror"></p>
+        Password: <input type="password" id="password" name="password" value=""/> 
+        <p id="passerror"></p>
+        <input type="submit" name="button" id="button" value="submit"/>
+        <p id="validerror"></p>
+    </form>
+    
+    <script>
+        //name = "alamin";
+        //var name = "alamin";
+        //let name = "alamin";
+        //let std = [1, 'alamin', 3.4, 'email@gamil.com'];
+        //std[0];
+
+        function sum(a, b){
+            return a+b;
+        }
+        //let c = sum(10,20);
+        
+        let f1 = function(a, b){
+            return a+b;
+        }
+        //let c = f1(10,20);
+
+        let f2 = (a,b)=>a+b;
+        let c = f2(20,30);
+
+        // if(){
+
+        // }else if(){
+
+        // }
+
+        // for(let i=0; i<10; i++){
+
+        // }
+
+        // if(1 === "1"){
+            
+        // }else{
+
+        // }
+
+        //console.log('test...');
+        //alert('test');
+        //document.write('TESTing from JS');
+        
+        function test(){
+            let head = document.getElementsByTagName('h1')[0];
+            head.innerHTML = "TEST";
+        }
+
+        function changeText(){
+            let username = document.getElementById('username').value;
+            let msg = document.getElementById('msg');
+
+            if(username == ""){
+                msg.innerHTML = "Please type username first!";
+                msg.style.color = 'red';
+            }else{
+                document.getElementById('head').innerHTML = username;
+                msg.innerHTML = "";
+            }
+        }
+
+        function validate(){
+            //check null for username 
+            //check null for password
+
+            //if username == password
+        }
+
+    </script>
+</body>
+</html>
