@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Email Validation</title>
+</head>
+<body>
+    <h1>Email Validation</h1>
+    <form action="selection.html" onsubmit="return validateEmail()">
+        Email: <input type="text" id="email" name="email">
+        <p id="emailError" style="color: red;"></p>
+        <input type="submit" value="Next">
+    </form>
+    <script>
+        function validateEmail(){
+            let email = document.getElementById('email').value.trim();
+            let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$/;
+            if(email === "" || !emailPattern.test(email)){
+                document.getElementById('emailError').innerHTML = "Invalid Email: Must be in a valid format.";
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

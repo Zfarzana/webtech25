@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Simple DOB Validation</title>
+</head>
+
+<body>
+
+    <h3>Date of Birth</h3>
+    <form onsubmit="return validateDOB()">
+        <input type="text" id="dd" placeholder="DD" maxlength="2" oninput="moveNext(this, 'mm')"> /
+        <input type="text" id="mm" placeholder="MM" maxlength="2" oninput="moveNext(this, 'yyyy')"> /
+        <input type="text" id="yyyy" placeholder="YYYY" maxlength="4">
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p id="error" style="color:red;"></p>
+
+    <script>
+        function validateDOB() {
+            let dd = document.getElementById("dd").value;
+            let mm = document.getElementById("mm").value;
+            let yyyy = document.getElementById("yyyy").value;
+            let error = "";
+
+            if (!dd || !mm || !yyyy) {
+                error = "All fields are required.";
+            } else if (dd < 1 || dd > 31) {
+                error = "Invalid day (1-31).";
+            } else if (mm < 1 || mm > 12) {
+                error = "Invalid month (1-12).";
+            } else if (yyyy < 1900 || yyyy > 2016) {
+                error = "Invalid year (1900-2016).";
+            }
+
+            document.getElementById("error").innerText = error;
+            return error === "";
+        }
+
+        function moveNext(current, nextField) {
+            if (current.value.length == current.maxLength) {
+                document.getElementById(nextField).focus();
+            }
+        }
+    </script>
+
+</body>
+
+</html>
