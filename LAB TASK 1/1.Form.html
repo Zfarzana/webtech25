@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equal Sections Form</title>
+</head>
+
+<fieldset> 
+    <legend>Personal Information</legend>
+<body>
+    <form action="#" method="post">
+
+
+            <table>
+                <tr>
+                <td> <fieldset>Name:</fieldset> </td>
+                <td><input type="text" name="fname"></td> 
+                </tr>
+
+                <tr>
+                    <td><fieldset> Last Name: </fieldset></td>
+                    <td><input type="text" name="lname"></td>
+                </tr>
+
+                <tr>
+                    <td><fieldset> ID :</fieldset></td>
+                    <td><input type="text" name="id"></td>
+                <tr>
+
+                 <tr>  
+                    <td><fieldset> Email:</fieldset></td>
+                    <td><input type="email" name="email"></td>
+                </tr>
+                <tr>
+                    <td><fieldset> Password: </fieldset></td>
+                    <td><input type="password" name="password"></td>
+                </tr>
+
+                <tr>    
+                    <td><fieldset> Gender:</fieldset></td>
+                    <td>
+                        <input type="radio" name="gender" value="Male"> Male
+                        <input type="radio" name="gender" value="Female"> Female
+                        <input type="radio" name="gender" value="Others"> Others
+                    </td>
+                </tr>
+            </table>
+<table>   
+
+        <tr>
+            <td><fieldset>Skill : </fieldset> </td>
+            <td>
+            <input type="checkbox" name="skills" value="Cyber Security"> Cyber Security
+            <input type="checkbox" name="skills" value="Software Engineer"> Software Engineer
+            <input type="checkbox" name="skills" value="Data Analyst"> Data Analyst
+            </td>
+        </tr>
+            
+
+            <tr> 
+            <td><fieldset> Address :</fieldset> </td>
+            <td><textarea name="address" rows="1" cols="50"></textarea></td>
+           </tr>
+</table>
+            <br>
+            <table>
+                <tr>
+                    <td><fieldset> Department:</fieldset></td>
+                    <td>
+                        <select name="department">
+                            <option value="CSE">CSE</option>
+                            <option value="EEE">EEE</option>
+                            <option value="BBA">BBA</option>
+                            <option value="ENGLISH">ENGLISH</option>
+                            <option value="IP">IP</option>
+                            <option value="LLB">LLB</option>
+                        </select>
+                    </td>
+                    <td>Date of Birth:</td>
+                    <td><input type="date" name="dob"></td>
+                </tr>
+                <tr>
+                    <td> <fieldset> Give your Image: </fieldset></td>
+                    <td colspan="3"><input type="file" name="image"></td>
+                </tr>
+            </table>
+
+
+        <br>
+
+        <button type="button">Button</button>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+
+ 
+
+</form>
+</body>
+</fieldset>
+</html>
