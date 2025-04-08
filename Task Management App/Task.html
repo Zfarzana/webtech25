@@ -1,0 +1,60 @@
+  <!-- Button to simulate opening detailed form -->
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title>Task Management</title>
+    <script src="tasks.js"></script>
+
+  </head>
+  <body>
+  
+    <h1>My Tasks</h1>
+  
+    <!-- Quick Add Task Bar -->
+    <section>
+      <h2>Quick Add</h2>
+      <form>
+        <label for="quick-task">New Task:</label><br>
+        <input type="text" id="quick-task" name="quick-task" placeholder="e.g. Buy groceries">
+        <input type="submit" value="Add">
+      </form>
+    </section>
+  
+    <hr>
+  
+    <!-- Detailed Task Form Section -->
+    <section>
+      <h2>Detailed Task</h2>
+      <form>
+        <label for="task-title">Task Name:</label><br>
+        <input type="text" id="task-title" name="task-title"><br><br>
+  
+        <label for="task-desc">Description:</label><br>
+        <textarea id="task-desc" name="task-desc" rows="3" cols="50"></textarea><br><br>
+  
+        <label for="task-labels">Labels (comma separated):</label><br>
+        <input type="text" id="task-labels" name="task-labels"><br><br>
+  
+        <label for="task-date">Due Date:</label><br>
+        <input type="date" id="task-date" name="task-date"><br><br>
+  
+        <input type="submit" value="Add Task">
+      </form>
+    </section>
+  
+    <hr>
+  
+    <!-- Voice Input Section -->
+    <section>
+      <h2>Voice Input (Sample)</h2>
+      <p>Say something like: <em>"Add task: Buy milk tomorrow"</em></p>
+      <input type="text" placeholder="Voice input placeholder">
+    </section>
+  
+    <hr>
+  
+    
+  
+  </body>
+  </html>
+  
